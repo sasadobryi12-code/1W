@@ -308,9 +308,45 @@ int __cdecl sub_401000(int a1, int a2)
 ### 333gogog0gog0g0g0
 
 # bin4.exe
-<img width="1094" height="638" alt="image" src="https://github.com/user-attachments/assets/ff789723-58a6-4ee1-8ba1-df0cee65f0b0" />
+<img width="1099" height="682" alt="image" src="https://github.com/user-attachments/assets/4745232a-d8aa-4b84-a8e1-e5ca71c319d3" />
+
 
 ### -Открыл Ida, закинул туда bin2.exe.
+
+### -После декомпиляции получил код:
+```c
+int sub_40101D()
+{
+  size_t v1; // [esp+0h] [ebp-104h]
+  char Str[8]; // [esp+4h] [ebp-100h] BYREF
+  char Str1[248]; // [esp+Ch] [ebp-F8h] BYREF
+
+  printf("Enter flag to check: ");
+  scanf("%s", Str);
+  v1 = 4 * strlen(Str);
+  if ( v1 == sub_401000((int)Str, 1) )
+  {
+    if ( !strncmp(Str, Str2, 8u) )
+    {
+      if ( !strcmp(Str1, aKomne) )
+        printf("Yes! Correct flag is %s\n", Str);
+      else
+        printf("Wrong check 2!\n");
+      return 0;
+    }
+    else
+    {
+      printf("Wrong check 1!\n");
+      return 0;
+    }
+  }
+  else
+  {
+    printf("Wrong length!\n");
+    return 0;
+  }
+}
+```
 ### -Заметил, что первая проверка означает, что берется длина строки, умножается на 4 и сравнивается с айди первого символа, если первая буква H, то всего длина должна быть 18
 ### -Дальше функция проверяет на одинаковые символы
 ### !strncmp(Str, Str2, 8u)
