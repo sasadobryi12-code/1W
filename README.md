@@ -1,5 +1,6 @@
 # bin1.exe
-<img width="1098" height="647" alt="image" src="https://github.com/user-attachments/assets/fadb2392-2557-422e-8ee1-a244b0e0da38" />
+<img width="1101" height="683" alt="image" src="https://github.com/user-attachments/assets/29911c50-cd99-49f7-8285-b67a88d241fa" />
+
 
 ### -Открыл Ida, закинул туда bin1.exe. 
 ### -После декомпиляции получил код:
