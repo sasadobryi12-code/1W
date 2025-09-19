@@ -27,7 +27,8 @@ if ( !strcmp(Str1, "arctf{z3r0_0r_no7_0}") )
 ```
 
 # bin2.exe
-<img width="1098" height="684" alt="image" src="https://github.com/user-attachments/assets/afcb22ed-327d-44af-a828-434b549161b3" />
+<img width="1097" height="685" alt="image" src="https://github.com/user-attachments/assets/de0e629e-a41b-4536-9eb7-76b65fe7f8bc" />
+
 
 
 ### -Открыл Ida, закинул туда bin2.exe.
