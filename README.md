@@ -80,12 +80,176 @@ int sub_401000()
 ### -Написал, проверил, все работает.
 
 # bin3.exe
-<img width="1097" height="684" alt="image" src="https://github.com/user-attachments/assets/8d45f26b-4d33-4e68-bbbd-b65d27002a8e" />
+<img width="1101" height="681" alt="image" src="https://github.com/user-attachments/assets/c91987dc-95f5-49e5-b404-f33aff192757" />
+
 
 ### -Открыл Ida, закинул туда bin2.exe.
-### -Просмотрел код
+### -После декомпиляции получил код:
+```c
+int sub_40101D()
+{
+  int v1; // [esp+0h] [ebp-124h]
+  int v2; // [esp+4h] [ebp-120h]
+  int v3; // [esp+8h] [ebp-11Ch]
+  int v4; // [esp+Ch] [ebp-118h]
+  int v5; // [esp+10h] [ebp-114h]
+  int v6; // [esp+14h] [ebp-110h]
+  int v7; // [esp+18h] [ebp-10Ch]
+  int v8; // [esp+1Ch] [ebp-108h]
+  int v9; // [esp+20h] [ebp-104h]
+  char Str[256]; // [esp+24h] [ebp-100h] BYREF
+
+  printf("Enter flag to check: ");
+  scanf("%s", Str);
+  if ( strlen(Str) == 17 )
+  {
+    if ( atoi(Str) == 333 )
+    {
+      if ( sub_401000((int)Str, 5) == 111 )
+      {
+        if ( sub_401000((int)Str, 7) == 111 )
+        {
+          if ( sub_401000((int)Str, 11) == 111 )
+          {
+            v9 = sub_401000((int)Str, 9);
+            if ( v9 == sub_401000((int)Str, 13) )
+            {
+              v8 = sub_401000((int)Str, 13);
+              if ( v8 == sub_401000((int)Str, 15) )
+              {
+                v7 = sub_401000((int)Str, 17);
+                if ( v7 == sub_401000((int)Str, 9) )
+                {
+                  v6 = sub_401000((int)Str, 4);
+                  if ( v6 == sub_401000((int)Str, 6) )
+                  {
+                    v5 = sub_401000((int)Str, 4);
+                    if ( v5 == sub_401000((int)Str, 8) )
+                    {
+                      v4 = sub_401000((int)Str, 4);
+                      if ( v4 == sub_401000((int)Str, 10) )
+                      {
+                        v3 = sub_401000((int)Str, 4);
+                        if ( v3 == sub_401000((int)Str, 12) )
+                        {
+                          v2 = sub_401000((int)Str, 4);
+                          if ( v2 == sub_401000((int)Str, 14) )
+                          {
+                            v1 = sub_401000((int)Str, 4);
+                            if ( v1 == sub_401000((int)Str, 16) )
+                            {
+                              if ( sub_401000((int)Str, 16) == 103 )
+                              {
+                                if ( sub_401000((int)Str, 9) == 48 )
+                                  printf("Yes! Correct flag is %s\n", Str);
+                                else
+                                  printf("No zero!\n");
+                                return 0;
+                              }
+                              else
+                              {
+                                printf("No \"g\"!\n");
+                                return 0;
+                              }
+                            }
+                            else
+                            {
+                              printf("Wrong check 10!\n");
+                              return 0;
+                            }
+                          }
+                          else
+                          {
+                            printf("Wrong check 9!\n");
+                            return 0;
+                          }
+                        }
+                        else
+                        {
+                          printf("Wrong check 8!\n");
+                          return 0;
+                        }
+                      }
+                      else
+                      {
+                        printf("Wrong check 7!\n");
+                        return 0;
+                      }
+                    }
+                    else
+                    {
+                      printf("Wrong check 6!\n");
+                      return 0;
+                    }
+                  }
+                  else
+                  {
+                    printf("Wrong check 5!\n");
+                    return 0;
+                  }
+                }
+                else
+                {
+                  printf("Wrong check 4!\n");
+                  return 0;
+                }
+              }
+              else
+              {
+                printf("Wrong check 3!\n");
+                return 0;
+              }
+            }
+            else
+            {
+              printf("Wrong check 2!\n");
+              return 0;
+            }
+          }
+          else
+          {
+            printf("No \"o3\"!\n");
+            return 0;
+          }
+        }
+        else
+        {
+          printf("No \"o2\"!\n");
+          return 0;
+        }
+      }
+      else
+      {
+        printf("No \"o1\"!\n");
+        return 0;
+      }
+    }
+    else
+    {
+      printf("Wrong check 1!\n");
+      return 0;
+    }
+  }
+  else
+  {
+    printf("Wrong length!\n");
+    return 0;
+  }
+}
+```
+### И небольшая функция:
+```c
+int __cdecl sub_401000(int a1, int a2)
+{
+  return *(char *)(a2 - 1 + a1);
+}
+```
 ### -Длина строки 17, первые 3 цифры это 333
-### atoi(Str) == 333
+```c
+  if ( strlen(Str) == 17 )
+  {
+    if ( atoi(Str) == 333 )
+```
 ### -Дальше программа проверяет по функции и проверяет какие буквы стоят
 ### -На 5 и 7 и 11 должна находится буква o
 ### (( sub_401000((int)Str, 11) == 111)
