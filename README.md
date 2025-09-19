@@ -4,9 +4,22 @@
 ### -Открыл Ida, закинул туда bin1.exe. 
 ### -Просмотрел код, увидел, что необходимо ввести пароль.
 ### -Увидел с чем сравнивает:
-\```c
- if ( !strcmp(Str1, "arctf{z3r0_0r_no7_0}") )
-\```
+```c
+int __cdecl main(int argc, const char **argv, const char **envp)
+{
+  char Str1[128]; // [rsp+20h] [rbp-80h] BYREF
+
+  _main(argc, argv, envp);
+  puts("Hello, enter password ");
+  scanf("%s", Str1);
+  if ( !strcmp(Str1, "arctf{z3r0_0r_no7_0}") )
+    puts("Yes!");
+  else
+    puts("Wrong!");
+  system("Pause");
+  return 0;
+}
+```
 
 # bin2.exe
 <img width="1082" height="683" alt="image" src="https://github.com/user-attachments/assets/30d1a652-e684-4bf3-8ecf-2e1384f11805" />
