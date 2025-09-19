@@ -27,9 +27,43 @@ if ( !strcmp(Str1, "arctf{z3r0_0r_no7_0}") )
 ```
 
 # bin2.exe
-<img width="1082" height="683" alt="image" src="https://github.com/user-attachments/assets/30d1a652-e684-4bf3-8ecf-2e1384f11805" />
+<img width="1098" height="684" alt="image" src="https://github.com/user-attachments/assets/afcb22ed-327d-44af-a828-434b549161b3" />
+
 
 ### -Открыл Ida, закинул туда bin2.exe.
+### -После декомпиляции получил код:
+
+```c
+int sub_401000()
+{
+  char Str[256]; // [esp+0h] [ebp-100h] BYREF
+
+  printf("Enter flag to check: ");
+  scanf("%s", Str);
+  if ( strlen(Str) == 12 )
+  {
+    if ( strcmp(Str, Str2) > 0 )
+    {
+      if ( strcmp(Str, aMiccheckH4y) < 0 )
+        printf("Yes! Correct flag is %s\n", Str);
+      else
+        printf("Wrong check 2!\n");
+      return 0;
+    }
+    else
+    {
+      printf("Wrong check 1!\n");
+      return 0;
+    }
+  }
+  else
+  {
+    printf("Wrong length!\n");
+    return 0;
+  }
+}
+```
+
 ### -Просмотрел код, увидел, что необходимо ввести какой-то пароль, который в длину должен быть 12 букв
 ### -Начал искать дальше, увидел 2 пароля, проверил их, понял, что в них последнии буквы находятся в алфавитном порядке, но пропущен x.
 ### -Посмотрел, что сравнивает программа в if и заметил, что сравнивает с двумя паролями и необходимо написать такой, который будет между ними
