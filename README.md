@@ -3,7 +3,10 @@
 
 ### -Открыл Ida, закинул туда bin1.exe. 
 ### -Просмотрел код, увидел, что необходимо ввести пароль.
-### -Начал искать и нашел сам пароль
+### -Увидел с чем сравнивает:
+\```c++
+ if ( !strcmp(Str1, "arctf{z3r0_0r_no7_0}") )
+\```
 
 # bin2.exe
 <img width="1082" height="683" alt="image" src="https://github.com/user-attachments/assets/30d1a652-e684-4bf3-8ecf-2e1384f11805" />
