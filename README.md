@@ -2,8 +2,7 @@
 <img width="1098" height="647" alt="image" src="https://github.com/user-attachments/assets/fadb2392-2557-422e-8ee1-a244b0e0da38" />
 
 ### -Открыл Ida, закинул туда bin1.exe. 
-### -Просмотрел код, увидел, что необходимо ввести пароль.
-### -Увидел с чем сравнивает:
+### -После декомпиляции получил код:
 ```c
 int __cdecl main(int argc, const char **argv, const char **envp)
 {
@@ -19,6 +18,12 @@ int __cdecl main(int argc, const char **argv, const char **envp)
   system("Pause");
   return 0;
 }
+```
+
+### -Увидел, что сравнивается пароль:
+```c
+
+if ( !strcmp(Str1, "arctf{z3r0_0r_no7_0}") )
 ```
 
 # bin2.exe
