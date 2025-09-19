@@ -366,12 +366,36 @@ if ( !strcmp(Str1, aKomne) )
 ### Она проверяет нашу строку с еще одной строкой(komne), попробовал сделать следующим образом: посчитал количество символов в 4_points и komne и пришел к выводу, что надо просто соединить 2 строки и напить ее
 
 # bin5.exe
-<img width="1096" height="649" alt="image" src="https://github.com/user-attachments/assets/c5cf9149-3285-4fe5-a9b2-f6f09a3ada70" />
+<img width="1093" height="675" alt="image" src="https://github.com/user-attachments/assets/6ac943f5-bf73-441c-87f1-9f8cc8be0fa6" />
+
 
 ### -Открыл Ida, закинул туда bin5.exe.
+### -После декомпиляции получил код:
+```c
+int sub_401000()
+{
+  signed int i; // [esp+0h] [ebp-114h]
+  char Str[15]; // [esp+5h] [ebp-10Fh] BYREF
+  char v3[256]; // [esp+14h] [ebp-100h] BYREF
+
+  strcpy(Str, "f2hwldozg|:wbq");
+  printf("Enter flag to check: ");
+  scanf("%s", v3);
+  for ( i = 0; i < (int)strlen(Str); ++i )
+  {
+    if ( i + v3[i] != Str[i] )
+    {
+      printf("Wrong position %d!\n", i);
+      return 0;
+    }
+  }
+  printf("Yes! Correct flag is %s\n", v3);
+  return 0;
+}
+```
 ### -Заметил, что идет проверка в цикле и проверяется схожесть айди символов.
 ### -Изучив подробнее код стало ясно, что str это f2hwldozg|:wbq, дальше в цикле можно увидеть i + v3[i] != Str[i], что означает, что правильные символы можно найти следующим образом:
 ### -Надо сначала заменить ! на =  i + v3[i] == Str[i], поменять местами: v3[i] == Str[i] – i, открыв айди символов, перебираем каждый:
 ### f-0 = f
-### 2-1=1 и так далее берем айди и вычитаем саму i, получая нужные буквы
+### 2-1=1 и так далее берем айди и вычитаем саму i, получая нужные буквы f1fth_is_s0lVd
 
