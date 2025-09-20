@@ -75,7 +75,8 @@ int __cdecl main(int argc, const char **argv, const char **envp)
 ### -Итоговый результат: "qwerty"
 
 # bin3.exe
-<img width="1100" height="681" alt="image" src="https://github.com/user-attachments/assets/f2104b37-025e-4f0f-8e25-4eff475b5456" />
+<img width="1100" height="685" alt="image" src="https://github.com/user-attachments/assets/cee73cc4-932f-4e72-a859-bf893add8f3d" />
+
 
 ### -Открыл ida, закинул файл
 ### -После декомпиляции получил код:
