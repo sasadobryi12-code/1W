@@ -119,3 +119,58 @@ if ( !strcmp(Str1, Destination) )
   return 0;
 ```
 ### -Вписывает свой любой логин, а в пороль без пробелов пишем свой же логин и добавляем "0xjfkD2"
+
+# bin4.exe
+
+
+
+### -Открыл ida, закинул файл
+### -После декомпиляции получил код:
+```c
+int __cdecl main(int argc, const char **argv, const char **envp)
+{
+  char v4[256]; // [esp+0h] [ebp-204h] BYREF
+  char Buffer[256]; // [esp+100h] [ebp-104h] BYREF
+  FILE *Stream; // [esp+200h] [ebp-4h]
+
+  Stream = fopen(FileName, Mode);
+  if ( Stream )
+  {
+    fgets(Buffer, 255, Stream);
+    fclose(Stream);
+    Stream = fopen(aHello2, aR_0);
+    if ( Stream )
+    {
+      fgets(v4, 255, Stream);
+      fclose(Stream);
+      if ( check(Buffer, v4) )
+      {
+        puts(aNope);
+        return 1;
+      }
+      else
+      {
+        if ( !check2(Buffer) )
+          printf("Flag{%s}\n", Buffer);
+        return 0;
+      }
+    }
+    else
+    {
+      puts(aNotAgain);
+      return 3;
+    }
+  }
+  else
+  {
+    puts(::Buffer);
+    return 5;
+  }
+}
+```
+### -Видим, что он открывает два файла по отдельности
+```c
+Stream = fopen(FileName, Mode);
+
+Stream = fopen(aHello2, aR_0);
+```
