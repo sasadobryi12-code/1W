@@ -28,3 +28,33 @@ int __cdecl main(int argc, const char **argv, const char **envp)
   return 0;
 ```
 ### -Вписал "VaL1DP@$$w0rD" и получил "You are welcome! Now you can use this app."
+
+# bin2.exe
+
+
+
+```c
+int __cdecl main(int argc, const char **argv, const char **envp)
+{
+  char Str[255]; // [esp+5h] [ebp-FFh] BYREF
+
+  ((void (__cdecl *)(char *))((char *)&etext + 1))(aThisIsSecureAp);
+  scanf("%s", Str);
+  if ( strlen(Str) == 6
+    && Str[0] == 113
+    && Str[1] == 119
+    && Str[2] == 101
+    && Str[3] == 114
+    && Str[4] == 116
+    && Str[5] == 121 )
+  {
+    ((void (__cdecl *)(char *))((char *)&etext + 1))(aYouAreWelcomeN);
+    return 1;
+  }
+  else
+  {
+    ((void (__cdecl *)(char *))((char *)&etext + 1))(aGoOutOfHere);
+    return 0;
+  }
+}
+```
