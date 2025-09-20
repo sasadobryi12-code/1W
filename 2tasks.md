@@ -235,3 +235,55 @@ int __cdecl check2(char *a1)
 ### - a1[5] - a1[4] равен 8, тоесть a1[4] это "a"
 ### - a1[6] должен быть равен a1
 ### - Получаем "zfssaizs", вписываем его в "Hello1", открываем "Hello2" и записываем туда отзеркаленую строку "sziassfz"
+
+
+# bin5.exe
+
+<img width="1100" height="683" alt="image" src="https://github.com/user-attachments/assets/9bd4473e-be7c-475f-a4e7-893360da7644" />
+
+### -Открыл ida, закинул файл
+### -После декомпиляции получил код:
+```c
+int __cdecl main(int argc, const char **argv, const char **envp)
+{
+  ((void (__cdecl *)(char *))((char *)&etext + 1))(aEnterSerialNum);
+  scanf("%s", &Buf);
+  if ( Check() )
+    PrintOK();
+  else
+    PrintError();
+  return 0;
+}
+```
+### И
+```c
+int Check()
+{
+  size_t v0; // eax
+  int i; // [esp+0h] [ebp-8h]
+
+  v0 = strlen(&Buf);
+  if ( v0 != 7 )
+    return 0;
+  if ( Buf != 97 )
+    return 0;
+  for ( i = 1; i < (int)(v0 - 1); ++i )
+  {
+    if ( *(&Buf + i) != i + *(&Buf + i - 1) )
+      return 0;
+  }
+  return 1;
+}
+```
+
+### -Длина строки должна быть 7
+### -Первая буква в строке "a"
+### -Дальше циклом проходит по строке и сравнивает
+### -Сравнение проиходит с арифметической прогрессией
+### Для i=1 buf[1] = 1 + 97 = 98, а это "b"
+### Для i=2 buf[2] = 2 + 98 = 100, а это "d"
+### Для i=3 buf[3] = 3 + 100 = 103, а это "g"
+### Для i=4 buf[4] = 4 + 103 = 107, а это "k"
+### Для i=5 buf[5] = 5 + 107 = 112, а это "p"
+### Для i=6 buf[6] = 6 + 112 = 118, а это "v"
+### Получаем строку: "abdgkpv"
