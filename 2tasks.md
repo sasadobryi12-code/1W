@@ -174,3 +174,51 @@ Stream = fopen(FileName, Mode);
 
 Stream = fopen(aHello2, aR_0);
 ```
+### -В коде находим их названия: "Hello1" и "Hello2"
+### -Создаем в папке с бинарников 2 текстовых файла и убираем расширение, чтобы он стал просто файлом
+### -Дальше у нас проверка на символы:
+```c
+int __cdecl check(int a1, int a2)
+{
+  int i; // [esp+0h] [ebp-Ch]
+  int v4; // [esp+4h] [ebp-8h]
+  int v5; // [esp+8h] [ebp-4h]
+
+  v5 = ((int (__cdecl *)(int))((char *)&etext + 1))(a1);
+  v4 = ((int (__cdecl *)(int))((char *)&etext + 1))(a2);
+  if ( v5 != v4 )
+    return -1;
+  for ( i = 0; i < v5; ++i )
+  {
+    if ( *(char *)(i + a1) != *(char *)(v4 - 1 - i + a2) )
+      return -1;
+  }
+  return 0;
+}
+
+```
+### - и
+```c
+int __cdecl check2(char *a1)
+{
+  if ( ((int (__cdecl *)(char *))((char *)&etext + 1))(a1) != 8 )
+    return -1;
+  if ( *a1 != a1[6] )
+    return -1;
+  if ( a1[2] != a1[3] )
+    return -1;
+  if ( a1[3] != a1[7] )
+    return -1;
+  if ( a1[1] != 102 )
+    return -1;
+  if ( a1[7] != 115 )
+    return -1;
+  if ( *a1 != 122 )
+    return -1;
+  if ( a1[5] - a1[4] != 8 )
+    return -1;
+  if ( a1[5] == 105 )
+    return 0;
+  return -1;
+}
+```
