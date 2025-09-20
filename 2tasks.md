@@ -2,7 +2,7 @@
 <img width="1101" height="736" alt="image" src="https://github.com/user-attachments/assets/a36b7521-b940-42be-a368-56861d678a22" />
 
 ### -Открыл ida, закинул файл
-### 
+### -После декомпиляции получил код:
 ```c
 int __cdecl main(int argc, const char **argv, const char **envp)
 {
@@ -32,6 +32,7 @@ int __cdecl main(int argc, const char **argv, const char **envp)
 # bin2.exe
 
 
+### -После декомпиляции получил код:
 
 ```c
 int __cdecl main(int argc, const char **argv, const char **envp)
