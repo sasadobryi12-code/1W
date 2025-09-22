@@ -13,3 +13,5 @@ https://drive.google.com/drive/folders/1sp8iqJOhqLapV2TIpWlY9ORJG347ITuq?usp=sha
 ### Дальше нажимаем ,,New"
 <img width="387" height="350" alt="image" src="https://github.com/user-attachments/assets/c8239011-ca53-4f13-9dae-b9ae9c6e0841" />
 
+### И выбираем нужный бинарный файл
+<img width="1181" height="711" alt="image" src="https://github.com/user-attachments/assets/c42f4d5a-e20c-4ef8-adda-e984eb98136b" />
