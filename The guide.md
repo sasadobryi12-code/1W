@@ -1,4 +1,4 @@
-# Объяснения, как пользоваться IDA
+<img width="1181" height="711" alt="image" src="https://github.com/user-attachments/assets/fae9e77d-1e04-4884-9638-b11d304b2a41" /># Объяснения, как пользоваться IDA
 ### Сначала необходимо скачать саму IDA
 ### Ссылка на скачивание:
 https://drive.google.com/drive/folders/1sp8iqJOhqLapV2TIpWlY9ORJG347ITuq?usp=sharing
@@ -15,3 +15,7 @@ https://drive.google.com/drive/folders/1sp8iqJOhqLapV2TIpWlY9ORJG347ITuq?usp=sha
 
 ### И выбираем нужный бинарный файл
 <img width="1181" height="711" alt="image" src="https://github.com/user-attachments/assets/c42f4d5a-e20c-4ef8-adda-e984eb98136b" />
+
+### Нажимаем много раз ,,Окей"
+<img width="744" height="510" alt="image" src="https://github.com/user-attachments/assets/f9cd650e-a430-46b6-b4f4-2ce0a29d1561" />
+
