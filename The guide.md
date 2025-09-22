@@ -1,4 +1,4 @@
-<img width="1181" height="711" alt="image" src="https://github.com/user-attachments/assets/fae9e77d-1e04-4884-9638-b11d304b2a41" />
+
 # Объяснения, как пользоваться IDA
 ### Сначала необходимо скачать саму IDA
 ### Ссылка на скачивание:
