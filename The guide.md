@@ -4,4 +4,6 @@
 https://drive.google.com/drive/folders/1sp8iqJOhqLapV2TIpWlY9ORJG347ITuq?usp=sharing
 ### После того, как скачали, надо разорхивировать и убрать аккуратно в папку
 ### Дальше скачиваем папку с заданием(Посмотреть в ТГ канале) и скачать(Внимательно смотрите срок сдачи заданий)
-### Дальше открываем саму IDA ()
+### Дальше открываем саму IDA (иногда для бинарника нужно открыть не ida.exe, а ida64.exe)
+<img width="982" height="957" alt="image" src="https://github.com/user-attachments/assets/e2abcd7b-4c27-40ac-b5a5-2adcda7b903f" />
+
