@@ -54,5 +54,5 @@ for country, temperatures in countries_temperature:
     z.append([country, round(aver, 1)])
 
 print(z)
-```
+
 
