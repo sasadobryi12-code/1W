@@ -1,3 +1,5 @@
+# Задание 1 -----------
+
 s = str(input())
 if len(s)%2==0:
     i= int(len(s)/2)
@@ -5,7 +7,7 @@ if len(s)%2==0:
 else:
     print(s[(len(s)%2)+1])
 
-
+# Задание 2 -----------
 
 a = 1
 b = 0
@@ -18,7 +20,7 @@ for i in range(10000):
         a = int(input())
         b+=a
 
-
+# Задание 3 -----------
 
 boy = ['Peter', 'Alex', 'John', 'Arthur', 'Richard']
 girl = ['Kate', 'Liza', 'Kira', 'Emma', 'Trisha']
@@ -31,7 +33,7 @@ if len(boy) == len(girl):
 else:
     print('Количетва парней и девушек неравны')
 
-
+# Задание 4 -----------
 
 def fahrenheit_to_celsius(fahrenheit):
     celsius = (fahrenheit - 32) * (5 / 9)
