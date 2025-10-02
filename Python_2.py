@@ -1,7 +1,6 @@
-# Задачи для занятия 2
 
-### Задание 1
-```python
+# Задание 1 -----------
+
 ids = {'user1': [213, 213, 213, 15, 213], 
        'user2': [54, 54, 119, 119, 119], 
        'user3': [213, 98, 98, 35]}
@@ -17,11 +16,9 @@ for i in range(len(idsList)):
 
 
 print(znap)
-```
 
-### Задание 2
+# Задание 2 -----------
 
-```python
 queries = [
     'смотреть сериалы онлайн',
     'новости спорта',
@@ -43,11 +40,9 @@ for i in range(len(queries)):
 
 print("Поисковых запросов, содержащих 2 слов(а):", round(s2/len(queries)* 100, 2), "%") 
 print("Поисковых запросов, содержащих 3 слов(а):",  round(s3/len(queries) * 100, 2), "%" )
-```
 
-### Задание 3
+# Задание 3 -----------
 
-```python
 results = {
     'vk': {'revenue': 103, 'cost': 98},
     'yandex': {'revenue': 179, 'cost': 153},
@@ -66,11 +61,8 @@ for key in sorted(results.keys()):
     print(f"'{key}': {results[key]},")
 print("}")
 
-```
+# Задание 4 -----------
 
-### Задание 4
-
-```python
 stats = {'facebook': 55, 'yandex': 115, 'vk': 120, 'google': 99, 'email': 42, 'ok': 98}
 
 i = 0
@@ -83,4 +75,4 @@ for key, value in stats.items():
     if value == i:
         print("Максимальный объем продаж на рекламном канале:", key)
 
-```
+
