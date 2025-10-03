@@ -1,3 +1,8 @@
+# bin1.exe
+
+<img width="1086" height="686" alt="image" src="https://github.com/user-attachments/assets/9afc5b58-5c55-44bf-9caf-4a59298e5908" />
+
+
 ### Открыл IDA, закинул бинарник и получил код:
 ```c
 __int64 start()
