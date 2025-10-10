@@ -28,13 +28,13 @@
 ### делаем небольшие мохинации в питоне и получаем код, где применяем ROR для восстановления исходных значений, сначала создаем список, где будут хранится наши буквы и мы юудем применять к ниф функцию ROR, чтобы найти нужные символы
 
 ```python
-def ror_byte(b):
+def ror(b):
     return ((b >> 1) | (b << 7)) & 0xFF
 
 bytes_after_rol = [0xC2, 0xE4, 0xC6, 0xE8, 0xCC, 0xF6, 0xE0, 0x60,
                    0xD2, 0xDC, 0xE8, 0xCA, 0xE4, 0xE6, 0xFA]
 
-original_bytes = [ror_byte(b) for b in bytes_after_rol]
+original_bytes = [ror(b) for b in bytes_after_rol]
 original_chars = [chr(b) for b in original_bytes]
 password = ''.join(original_chars)
 
