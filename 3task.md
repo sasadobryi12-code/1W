@@ -1,6 +1,6 @@
 # bin1.exe
 
--<img width="1095" height="605" alt="image" src="https://github.com/user-attachments/assets/3f4ebce6-41cd-4dd9-ab86-4a7c94bc6adf" />
+<img width="1095" height="605" alt="image" src="https://github.com/user-attachments/assets/3f4ebce6-41cd-4dd9-ab86-4a7c94bc6adf" />
 
 ### Открыл ida, закинул код и получил:
 
