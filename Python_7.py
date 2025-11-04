@@ -1,10 +1,42 @@
-# Задание 1 ---------------------------------------------
-
 import os
 import re
 import inspect
 import numpy as np
 from collections import Counter
+
+# Задание 1
+
+N = 10
+arr = np.arange(N - 1, -1, -1)
+print(arr)
+# Вывод: [9 8 7 6 5 4 3 2 1 0]
+
+# Задание 2
+
+N = 10
+diagonal_elements = np.arange(N - 1, -1, -1)
+diag_matrix = np.diag(diagonal_elements)
+diagonal_sum = np.sum(diagonal_elements) 
+
+print(diag_matrix)
+print("Сумма диагонали:", diagonal_sum)
+
+# Задание 3
+
+A = np.array([
+    [4, 2, 1],
+    [1, 3, 0],
+    [0, 5, 4]
+])
+
+b = np.array([4, 12, -3])
+solution = np.linalg.solve(A, b)
+
+print("Решение (x, y, z):", solution)
+# Вывод: [ 2.  3. -3.]
+
+# Задание 1 ---------------------------------------------
+
 
 def task_01_func(year):
     if year % 4 == 0:
