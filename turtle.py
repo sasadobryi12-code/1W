@@ -77,27 +77,21 @@ screen.exitonclick()
 
 # Задание 5
 
-screen = turtle.Screen()
-screen.bgcolor("white")
-screen.setup(800, 800)
-screen.title("Спираль")
+import turtle
 
 t = turtle.Turtle()
-t.color("black")
-t.pensize(1)
+screen = turtle.Screen()
+screen.bgcolor('black')
+t.color('green')
 
-angle = 10
-step = 0.3
-length = 2
-loops = 600
+v = 1 
 
-for i in range(loops):
-    t.forward(length)
-    t.right(angle)
-    length += step
+while v < 300:
+    t.forward(v)
+    t.right(20)
+    v += 1
 
-
-turtle.done()
+screen.exitonclick()
 
 
 # Задание 6
