@@ -3,7 +3,7 @@ import turtle
 screen = turtle.Screen()
 screen.bgcolor("white")
 screen.setup(800, 800)
-screen.title("Большая спираль с множеством линий")
+screen.title("Спираль")
 
 t = turtle.Turtle()
 t.color("black")
