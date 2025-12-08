@@ -37,9 +37,6 @@ def draw_grass(screen):
     pygame.draw.rect(screen, (0, 220, 100), (0, 450, 600, 350))
 
 
-def draw_path(screen):
-    pygame.draw.polygon(screen, (193, 157, 116), [(0, 650), (0, 700), (600, 700), (600, 650)])
-
 
 def draw_doghouse(screen):
     # Стены будки
@@ -70,47 +67,6 @@ def draw_chain(screen):
     for x, y, w, h, width in chain_parts:
         pygame.draw.ellipse(screen, BLACK, (x, y, w, h), width)
 
-
-def draw_flower(screen, x, y):
-    """Рисует цветок с центром у основания стебля в (x, y)"""
-    stem_top = (x, y - 50)
-    pygame.draw.line(screen, GREEN, (x, y), stem_top, 2)
-    
-    # Лепестки
-    pygame.draw.circle(screen, YELLOW, (x + 12, y - 50), 10)
-    pygame.draw.circle(screen, YELLOW, (x - 9, y - 50), 10)
-    pygame.draw.circle(screen, YELLOW, (x + 1, y - 38), 10)
-    pygame.draw.circle(screen, YELLOW, (x + 1, y - 62), 10)
-    pygame.draw.circle(screen, RED, (x + 1, y - 50), 8)
-    
-    # Лист
-    pygame.draw.ellipse(screen, GREEN, (x, y - 25, 20, 10), 5)
-
-
-def draw_tree(screen):
-    # Ствол
-    pygame.draw.polygon(screen, OAK, [(540, 800), (600, 800), (600, 0), (540, 0)])
-    # Ветки (чёрные линии)
-    branches = [
-        (565, 780, 565, 760),
-        (565, 200, 565, 240),
-        (585, 400, 585, 415),
-        (560, 50, 560, 80),
-        (570, 650, 570, 612),
-        (555, 500, 555, 550),
-        (565, 430, 565, 450),
-        (575, 300, 575, 340),
-        (585, 100, 585, 140),
-        (575, 740, 575, 700),
-    ]
-    for x1, y1, x2, y2 in branches:
-        pygame.draw.line(screen, BLACK, (x1, y1), (x2, y2), 1)
-    
-    # Крона
-    pygame.draw.circle(screen, GREEN, (510, 0), 150)
-    pygame.draw.circle(screen, LIGHT_GREEN1, (520, 10), 120)
-    pygame.draw.circle(screen, GREEN, (600, 0), 150)
-    pygame.draw.circle(screen, LIGHT_GREEN1, (590, 10), 120)
 
 
 def draw_dog(screen):
@@ -164,17 +120,11 @@ def draw_dog(screen):
 
 
 def draw_scene(screen):
-    """Основная функция отрисовки всей сцены"""
     draw_sky(screen)
     draw_fence(screen)
     draw_grass(screen)
-    draw_path(screen)
     draw_doghouse(screen)
     draw_chain(screen)
-    draw_flower(screen, 200, 550)
-    draw_flower(screen, 150, 550)
-    draw_flower(screen, 100, 550)
-    draw_tree(screen)
     draw_dog(screen)
 
 
