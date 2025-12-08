@@ -1,7 +1,7 @@
 import pygame
 import math
 
-# Инициализация цветов
+# Цвета
 RED = (255, 0, 0)
 GREEN = (0, 100, 0)
 LIGHT_GREEN1 = (0, 130, 0)
@@ -14,45 +14,54 @@ BROWN = (112, 91, 91)
 FENCE_YELLOW = (204, 204, 0)
 
 
-def draw_sky(screen):
-    pygame.draw.rect(screen, (0, 255, 255), (0, 0, 600, 120))
+def apply_transform(points, x, y, scale):
+    return [(x + px * scale, y + py * scale) for (px, py) in points]
 
 
-def draw_fence(screen):
-    # Основной забор
-    pygame.draw.rect(screen, FENCE_YELLOW, (0, 120, 600, 330))
-    # Полосы забора
-    x1, y1 = 0, 120
-    x2, y2 = 600, 450
+def draw_sky(screen, x, y, scale):
+    pygame.draw.rect(screen, (0, 255, 255), (x, y, int(600 * scale), int(120 * scale)))
+
+
+def draw_fence(screen, x, y, scale):
+    pygame.draw.rect(screen, FENCE_YELLOW, (x, y, int(600 * scale), int(330 * scale)))
+    x1, y1 = x, y
+    x2, y2 = x + int(600 * scale), y + int(330 * scale)
     N = 14
-    pygame.draw.rect(screen, BLACK, (x1, y1, x2 - x1, y2 - y1), 1)
+    pygame.draw.rect(screen, BLACK, (x1, y1, x2 - x1, y2 - y1), max(1, int(1 * scale)))
     h = (x2 - x1) // (N + 1)
-    x = x1 + h
+    x_pos = x1 + h
     for _ in range(N):
-        pygame.draw.line(screen, BLACK, (x, y1), (x, y2))
-        x += h
+        pygame.draw.line(screen, BLACK, (x_pos, y1), (x_pos, y2))
+        x_pos += h
 
 
-def draw_grass(screen):
-    pygame.draw.rect(screen, (0, 220, 100), (0, 450, 600, 350))
+def draw_grass(screen, x, y, scale):
+    pygame.draw.rect(screen, (0, 220, 100), (x, y, int(600 * scale), int(350 * scale)))
 
 
+def draw_doghouse(screen, x, y, scale):
+    wall1 = apply_transform([(370, 500), (480, 530), (480, 640), (370, 600)], x, y, scale)
+    wall2 = apply_transform([(480, 530), (510, 495), (510, 590), (480, 640)], x, y, scale)
+    roof = apply_transform([(370, 500), (430, 440), (470, 410), (510, 495), (480, 530)], x, y, scale)
 
-def draw_doghouse(screen):
-    # Стены будки
-    pygame.draw.polygon(screen, FENCE_YELLOW, [(370, 500), (480, 530), (480, 640), (370, 600)])
-    pygame.draw.polygon(screen, FENCE_YELLOW, [(480, 530), (510, 495), (510, 590), (480, 640)])
-    pygame.draw.polygon(screen, (200, 190, 0), [(370, 500), (430, 440), (470, 410), (510, 495), (480, 530)])
-    
-    pointlist_house = [
-        (370, 500),(370, 600),(480, 640),(480, 530),(480, 640), (510, 590),(510, 495),
-        (480, 530),(370, 500), (430, 440), (470, 410), (510, 495), (480, 530), (430, 440)]
-    pygame.draw.lines(screen, (0, 0 , 0), False, pointlist_house, 1)
-    pygame.draw.circle(screen, (0,0,0), (420, 570), 30)
+    pygame.draw.polygon(screen, FENCE_YELLOW, wall1)
+    pygame.draw.polygon(screen, FENCE_YELLOW, wall2)
+    pygame.draw.polygon(screen, (200, 190, 0), roof)
+
+    pointlist_house = apply_transform([
+        (370, 500), (370, 600), (480, 640), (480, 530),
+        (480, 640), (510, 590), (510, 495), (480, 530),
+        (370, 500), (430, 440), (470, 410), (510, 495),
+        (480, 530), (430, 440)
+    ], x, y, scale)
+    pygame.draw.lines(screen, BLACK, False, pointlist_house, max(1, int(1 * scale)))
+
+    cx, cy = x + 420 * scale, y + 570 * scale
+    r = 30 * scale
+    pygame.draw.circle(screen, BLACK, (int(cx), int(cy)), max(1, int(r)))
 
 
-def draw_chain(screen):
-    # Цепь — серия эллипсов
+def draw_chain(screen, x, y, scale):
     chain_parts = [
         (385, 590, 25, 10, 2),
         (385, 595, 10, 15, 0),
@@ -64,82 +73,105 @@ def draw_chain(screen):
         (318, 627, 12, 15, 2),
         (305, 635, 20, 10, 2),
     ]
-    for x, y, w, h, width in chain_parts:
-        pygame.draw.ellipse(screen, BLACK, (x, y, w, h), width)
+    for px, py, w, h, width in chain_parts:
+        rect = (x + px * scale, y + py * scale, w * scale, h * scale)
+        pygame.draw.ellipse(screen, BLACK, rect, max(1, int(width * scale)))
 
 
-
-def draw_dog(screen):
+def draw_dog(screen, x, y, scale):
     # Лапы
-    pygame.draw.ellipse(screen, BROWN, (20, 700, 50, 25))   # Правая передняя
-    pygame.draw.ellipse(screen, BROWN, (110, 715, 50, 25))  # Левая передняя
-    pygame.draw.ellipse(screen, BROWN, (245, 675, 40, 20))  # Левая задняя
-    pygame.draw.ellipse(screen, BROWN, (175, 645, 40, 20))  # Правая задняя
+    pygame.draw.ellipse(screen, BROWN, (x + 20*scale, y + 700*scale, 50*scale, 25*scale))
+    pygame.draw.ellipse(screen, BROWN, (x + 110*scale, y + 715*scale, 50*scale, 25*scale))
+    pygame.draw.ellipse(screen, BROWN, (x + 245*scale, y + 675*scale, 40*scale, 20*scale))
+    pygame.draw.ellipse(screen, BROWN, (x + 175*scale, y + 645*scale, 40*scale, 20*scale))
 
     # Ноги
-    pygame.draw.ellipse(screen, BROWN, (50, 595, 40, 115))
-    pygame.draw.ellipse(screen, BROWN, (135, 610, 40, 115))
-    pygame.draw.ellipse(screen, BROWN, (270, 625, 20, 60))
-    pygame.draw.ellipse(screen, BROWN, (200, 595, 20, 60))
+    pygame.draw.ellipse(screen, BROWN, (x + 50*scale, y + 595*scale, 40*scale, 115*scale))
+    pygame.draw.ellipse(screen, BROWN, (x + 135*scale, y + 610*scale, 40*scale, 115*scale))
+    pygame.draw.ellipse(screen, BROWN, (x + 270*scale, y + 625*scale, 20*scale, 60*scale))
+    pygame.draw.ellipse(screen, BROWN, (x + 200*scale, y + 595*scale, 20*scale, 60*scale))
 
     # Туловище
-    pygame.draw.ellipse(screen, BROWN, (165, 560, 55, 65))
-    pygame.draw.ellipse(screen, BROWN, (230, 585, 55, 60))
-    pygame.draw.ellipse(screen, BROWN, (180, 560, 90, 55))
-    pygame.draw.ellipse(screen, BROWN, (60, 565, 150, 80))
+    pygame.draw.ellipse(screen, BROWN, (x + 165*scale, y + 560*scale, 55*scale, 65*scale))
+    pygame.draw.ellipse(screen, BROWN, (x + 230*scale, y + 585*scale, 55*scale, 60*scale))
+    pygame.draw.ellipse(screen, BROWN, (x + 180*scale, y + 560*scale, 90*scale, 55*scale))
+    pygame.draw.ellipse(screen, BROWN, (x + 60*scale, y + 565*scale, 150*scale, 80*scale))
 
     # Голова
-    pygame.draw.rect(screen, BROWN, (61, 530, 90, 90))
-    pygame.draw.lines(screen, BLACK, True, [(61, 530), (151, 530), (151, 620), (61, 620)], 1)
+    pygame.draw.rect(screen, BROWN, (x + 61*scale, y + 530*scale, 90*scale, 90*scale))
+    pygame.draw.lines(screen, BLACK, True, apply_transform(
+        [(61, 530), (151, 530), (151, 620), (61, 620)], x, y, scale), max(1, int(1*scale)))
 
     # Уши
-    pygame.draw.ellipse(screen, BROWN, (48, 530, 25, 30))
-    pygame.draw.ellipse(screen, BLACK, (48, 530, 25, 30), 1)
-    pygame.draw.ellipse(screen, BROWN, (138, 530, 25, 30))
-    pygame.draw.ellipse(screen, BLACK, (138, 530, 25, 30), 1)
+    pygame.draw.ellipse(screen, BROWN, (x + 48*scale, y + 530*scale, 25*scale, 30*scale))
+    pygame.draw.ellipse(screen, BLACK, (x + 48*scale, y + 530*scale, 25*scale, 30*scale), max(1, int(1*scale)))
+    pygame.draw.ellipse(screen, BROWN, (x + 138*scale, y + 530*scale, 25*scale, 30*scale))
+    pygame.draw.ellipse(screen, BLACK, (x + 138*scale, y + 530*scale, 25*scale, 30*scale), max(1, int(1*scale)))
 
     # Глаза
-    pygame.draw.ellipse(screen, WHITE, (75, 560, 20, 7))
-    pygame.draw.ellipse(screen, BLACK, (75, 560, 20, 7), 1)
-    pygame.draw.circle(screen, BLACK, (85, 564), 4)
+    pygame.draw.ellipse(screen, WHITE, (x + 75*scale, y + 560*scale, 20*scale, 7*scale))
+    pygame.draw.ellipse(screen, BLACK, (x + 75*scale, y + 560*scale, 20*scale, 7*scale), max(1, int(1*scale)))
+    pygame.draw.circle(screen, BLACK, (x + 85*scale, y + 564*scale), max(1, int(4*scale)))
 
-    pygame.draw.ellipse(screen, WHITE, (116, 560, 20, 7))
-    pygame.draw.ellipse(screen, BLACK, (116, 560, 20, 7), 1)
-    pygame.draw.circle(screen, BLACK, (126, 564), 4)
+    pygame.draw.ellipse(screen, WHITE, (x + 116*scale, y + 560*scale, 20*scale, 7*scale))
+    pygame.draw.ellipse(screen, BLACK, (x + 116*scale, y + 560*scale, 20*scale, 7*scale), max(1, int(1*scale)))
+    pygame.draw.circle(screen, BLACK, (x + 126*scale, y + 564*scale), max(1, int(4*scale)))
 
     # Зубы
-    pygame.draw.polygon(screen, WHITE, [(84, 582), (87, 593), (79, 598)])
-    pygame.draw.polygon(screen, BLACK, [(83, 582), (88, 593), (78, 598)], 1)
-    pygame.draw.polygon(screen, WHITE, [(131, 598), (123, 593), (126, 583)])
-    pygame.draw.polygon(screen, BLACK, [(131, 598), (122, 593), (126, 583)], 1)
+    tooth1 = apply_transform([(84, 582), (87, 593), (79, 598)], x, y, scale)
+    pygame.draw.polygon(screen, WHITE, tooth1)
+    pygame.draw.polygon(screen, BLACK, tooth1, max(1, int(1*scale)))
+
+    tooth2 = apply_transform([(131, 598), (123, 593), (126, 583)], x, y, scale)
+    pygame.draw.polygon(screen, WHITE, tooth2)
+    pygame.draw.polygon(screen, BLACK, tooth2, max(1, int(1*scale)))
 
     # Рот
+    arc_rect = (x + 75*scale, y + 590*scale, 60*scale, 35*scale)
     start = math.radians(0)
     stop = math.radians(180)
-    pygame.draw.arc(screen, BLACK, (75, 590, 60, 35), start, stop, 1)
+    pygame.draw.arc(screen, BLACK, arc_rect, start, stop, max(1, int(1*scale)))
 
 
-def draw_scene(screen):
-    draw_sky(screen)
-    draw_fence(screen)
-    draw_grass(screen)
-    draw_doghouse(screen)
-    draw_chain(screen)
-    draw_dog(screen)
-
-
+# ======================
+# ОСНОВНАЯ ФУНКЦИЯ
+# ======================
 def main():
     pygame.init()
     FPS = 30
-    screen = pygame.display.set_mode((600, 800))
-    pygame.display.set_caption("Pygame Scene")
-
-    draw_scene(screen)
-    pygame.display.update()
+    screen = pygame.display.set_mode((600,800))
+    pygame.display.set_caption("Custom Scene — Draw What You Want!")
 
     clock = pygame.time.Clock()
     running = True
+
     while running:
+        screen.fill(WHITE)  # чистый белый фон
+
+        draw_doghouse(screen, 700, 200, 0.9)
+
+        draw_sky(screen, 0, 0, 1.0)
+
+        draw_grass(screen, 0, 120 + 330, 1.0)
+
+        draw_fence(screen, 0, 120, 1.0)
+
+        draw_doghouse(screen, 10, 40, 0.9)
+
+        draw_doghouse(screen, 70, 180, 0.9)
+
+        draw_chain(screen, 70, 180, 0.9)
+
+        draw_chain(screen, 10, 40, 0.9)
+
+        draw_dog(screen, 0, 80, 0.8)
+
+        draw_dog(screen, 120, 420, 0.4)
+
+        draw_dog(screen, 180, 500, 0.4)
+
+        pygame.display.update()
+
         clock.tick(FPS)
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
