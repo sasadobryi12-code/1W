@@ -55,25 +55,26 @@ screen.exitonclick()
 
 # Задание 4
 
-
 screen = turtle.Screen()
 
 turtle.bgcolor('black')
 t.color('green')
 v = 0
+n=9
 
 t.shape('turtle')
-t.forward(50)
-t.stamp()
-for i in range(12):
-    t.right(180)
-    t.forward(50)
-    t.right(v)
-    t.forward(50)
-    t.stamp()
-    v+=45
+
+if n>=0 & v <=360:
+        a = 360/n
+        while v!=n:
+                t.right(a)
+                t.forward(50)
+                t.stamp()  
+                t.back(50) 
+                v+=1
 
 screen.exitonclick()
+
 
 # Задание 5
 
