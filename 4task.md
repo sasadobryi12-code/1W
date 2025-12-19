@@ -1,3 +1,10 @@
+### Bin4.exe
+<img width="1088" height="675" alt="image" src="https://github.com/user-attachments/assets/3ecf01af-18cb-4996-98e2-abc541f051ec" />
+#### Программа принимает два числа a и b, расшифровывает встроенную строку с помощью аффинного шифра Цезаря, затем использует полученную строку как ключ для XOR-дешифрования массива байтов и выводит флаг.
+#### Значения a = 21 и b = 15 получены перебором допустимых a (взаимно простых с 26) и b (0–25) до появления осмысленного текста после дешифрования, который затем корректно раскрывает флаг.
+<img width="1422" height="907" alt="image" src="https://github.com/user-attachments/assets/b24d3b85-976b-4956-b26e-13f426940dc1" />
+
+
 ### Bin5.exe
 <img width="1098" height="684" alt="image" src="https://github.com/user-attachments/assets/6f023640-812a-4221-8643-908f109d5e6c" />
 
