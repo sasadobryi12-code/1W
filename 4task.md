@@ -147,7 +147,8 @@ int __cdecl main(int argc, const char **argv, const char **envp)
 ## Bin8.exe
 
 
-<img width="1090" height="953" alt="image" src="https://github.com/user-attachments/assets/867f361c-9541-4c66-9c3e-2f66c437a72c" />
+<img width="1080" height="957" alt="image" src="https://github.com/user-attachments/assets/3f6a48b4-2206-4d10-866e-731fb559e9ae" />
+
 
 
 <img width="1118" height="334" alt="image" src="https://github.com/user-attachments/assets/f38b8bb0-c3a5-420e-92b4-1a397f185179" />
