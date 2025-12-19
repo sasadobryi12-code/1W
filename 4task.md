@@ -108,3 +108,28 @@ int __cdecl main(int argc, const char **argv, const char **envp)
   return 0;
 }
 ```
+
+
+
+
+## Bin6.exe
+
+<img width="1087" height="954" alt="image" src="https://github.com/user-attachments/assets/8fd8db09-379b-4e34-bb68-c2bb9d3109b0" />
+
+### 3. XOR-дешифровка (arctf{5trang3_s7r1ng})
+
+#### Программа хранит зашифрованную строку:
+
+#### dwfqc~0qwdkb6Zv2w4kbx
+
+#### Каждый символ XOR-ится с ключом 5 при правильном ответе на арифметический пример.
+
+#### XOR — обратимая операция, поэтому применяя XOR с 5 к каждому символу, можно расшифровать строку.
+
+#### Вручную: для каждого символа берём ASCII-код, выполняем код ^ 5 и переводим обратно в символ.
+
+#### После применения ко всей строке получаем флаг:
+
+#### arctf{5trang3_s7r1ng}
+<img width="1213" height="774" alt="image" src="https://github.com/user-attachments/assets/55ca4675-6887-40c9-8d76-6e48427bde27" />
+
