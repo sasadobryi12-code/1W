@@ -3,7 +3,7 @@ import turtle as t
 import random
 t = turtle.Turtle()
 
-# Задание 1
+# Упражнение №3: квадрат
 
 screen = turtle.Screen()
 
@@ -19,7 +19,7 @@ t.forward(100)
 screen.exitonclick()
 
 
-# Задание 2
+# Упражнение №4: окружность
 
 screen = turtle.Screen()
 
@@ -28,7 +28,7 @@ t.circle(100)
 
 screen.exitonclick()
 
-# Задание 3
+# Упражнение №5: больше квадратов
 
 
 screen = turtle.Screen()
@@ -53,7 +53,7 @@ for i in range(88):
 
 screen.exitonclick()
 
-# Задание 4
+# Упражнение №6: паук
 
 screen = turtle.Screen()
 
@@ -76,7 +76,7 @@ if n>=0 & v <=360:
 screen.exitonclick()
 
 
-# Задание 5
+# Упражнение №7: спираль
 
 import turtle
 
@@ -95,7 +95,7 @@ while v < 300:
 screen.exitonclick()
 
 
-# Задание 6
+# Упражнение №8: квадратная «спираль»
 
 screen = turtle.Screen()
 
