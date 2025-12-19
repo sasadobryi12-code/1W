@@ -1,6 +1,8 @@
 ### Bin5.exe
 <img width="1098" height="684" alt="image" src="https://github.com/user-attachments/assets/6f023640-812a-4221-8643-908f109d5e6c" />
 
+#### Открыл IDA, закинул bin5.exe и увидел код, где 5 проверок, которые не сильно спрятаны, все в коде на видном месте
+
 ```c#
 int __cdecl main(int argc, const char **argv, const char **envp)
 {
