@@ -200,3 +200,28 @@ gcd = year;
 Сообщения "Too young!", "Too old!", "Too early!", "Too late!" — при нарушении диапазонов.
 
 <img width="698" height="365" alt="image" src="https://github.com/user-attachments/assets/ba9a69da-3b0e-4a1b-8a25-6e08141d5ed5" />
+
+## Bin11.exe
+
+<img width="1098" height="663" alt="image" src="https://github.com/user-attachments/assets/c4565268-ebb0-405e-bf24-e413a085ddde" />
+
+Проверяет серийный ключ и разрешает доступ только правильному ключу.
+
+Пользователь вводит ключ.
+
+Программа формирует правильный ключ из строки "simple_answer":
+
+Берутся символы с 8-го по 13-й → "answer"
+
+Добавляется символ _ → "answer_"
+
+Сравнивает введённый ключ с правильным.
+
+Если совпадает → "You are welcome!", иначе → "Go out of here!"
+
+Правильный ключ: answer_simple
+
+<img width="936" height="528" alt="image" src="https://github.com/user-attachments/assets/d4393396-fa43-456e-adfe-a0be71c6a6e0" />
+
+
+
