@@ -8,6 +8,10 @@ if ( (unsigned int)((int (__cdecl *)(const char *))((char *)&etext + 1))(argv[1]
 ```
 0x80 = 128
 
+```c#
+if ( strlen(argv[1]) <= 128 )
+```
+
 Функция swaper:
 #### -получает длину строки
 #### -разбивает строку на блоки размера a2
