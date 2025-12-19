@@ -188,6 +188,38 @@ int __cdecl main(int argc, const char **argv, const char **envp)
 #### arctf{5trang3_s7r1ng}
 <img width="1213" height="774" alt="image" src="https://github.com/user-attachments/assets/55ca4675-6887-40c9-8d76-6e48427bde27" />
 
+## Bin7.exe
+
+<img width="1089" height="682" alt="image" src="https://github.com/user-attachments/assets/1ac1f598-2a44-444b-bf56-46069f3a364b" />
+
+Программа работает с массивом из 10 чисел (v6) и проверяет их через XOR и логическое AND.
+
+Ход работы программы:
+
+Вводятся 10 целых чисел с консоли в массив v6.
+
+Вычисляется v5 = v6[0] ^ v6[1] ^ ... ^ v6[9] (XOR всех элементов).
+
+Вычисляется v4 = v6[0] && v6[1] && ... && v6[9] (все элементы ненулевые).
+
+Проверяется условие if (v5 || !v4).
+
+Вывод: для успеха нужно:
+
+Все числа ненулевые
+
+XOR всех чисел = 0
+
+Примеры решений:
+
+69 69 69 69 69 69 69 69 69 69
+или
+1 1 2 2 3 3 4 4 5 5
+
+FLAG:
+1 1 2 2 3 3 4 4 5 5
+
+<img width="1222" height="384" alt="image" src="https://github.com/user-attachments/assets/4b0cc5b4-9b0d-4660-aec1-30754d46eb7b" />
 
 
 ## Bin8.exe
