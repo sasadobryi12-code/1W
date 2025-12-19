@@ -142,3 +142,12 @@ int __cdecl main(int argc, const char **argv, const char **envp)
 #### arctf{5trang3_s7r1ng}
 <img width="1213" height="774" alt="image" src="https://github.com/user-attachments/assets/55ca4675-6887-40c9-8d76-6e48427bde27" />
 
+
+
+## Bin8.exe
+
+
+<img width="1090" height="953" alt="image" src="https://github.com/user-attachments/assets/867f361c-9541-4c66-9c3e-2f66c437a72c" />
+
+
+<img width="1118" height="334" alt="image" src="https://github.com/user-attachments/assets/f38b8bb0-c3a5-420e-92b4-1a397f185179" />
