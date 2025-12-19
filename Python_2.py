@@ -29,17 +29,20 @@ queries = [
     'сериалы про спорт',
 ]
 
-s3 = 0
-s2 = 0
+number = {}
 
-for i in range(len(queries)):
-    if len(queries[i].split(' ')) == 3:
-        s3+=1
+for i in queries:
+    word = len(i.split())
+    if word in number:
+        number[word] += 1
     else:
-        s2+=1
+        number[word] = 1
 
-print("Поисковых запросов, содержащих 2 слов(а):", round(s2/len(queries)* 100, 2), "%") 
-print("Поисковых запросов, содержащих 3 слов(а):",  round(s3/len(queries) * 100, 2), "%" )
+number_len = len(queries)
+
+for num_word in sorted(number):
+    percent = round(number[num_word] / number_len * 100, 2)
+    print(f"Поисковых запросов, содержащих {num_word} слов(а): {percent}%")
 
 # Задание 3 -----------
 
