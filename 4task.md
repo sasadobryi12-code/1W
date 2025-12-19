@@ -1,4 +1,4 @@
-### Bin3.exe
+## Bin3.exe
 <img width="1096" height="685" alt="image" src="https://github.com/user-attachments/assets/99f88906-ada4-4db5-8291-d497550cc29e" />
 
 <img width="1181" height="712" alt="image" src="https://github.com/user-attachments/assets/6cd7ed6a-17c1-44fc-86a3-3b21ff571108" />
@@ -21,14 +21,14 @@ if ( strlen(argv[1]) <= 128 )
 <img width="1034" height="438" alt="image" src="https://github.com/user-attachments/assets/513c5153-9a07-45ca-b728-35aa06454850" />
 
 
-### Bin4.exe
+## Bin4.exe
 <img width="1088" height="675" alt="image" src="https://github.com/user-attachments/assets/3ecf01af-18cb-4996-98e2-abc541f051ec" />
  Программа принимает два числа a и b, расшифровывает встроенную строку с помощью аффинного шифра Цезаря, затем использует полученную строку как ключ для XOR-дешифрования массива байтов и выводит флаг.
 Значения a = 21 и b = 15 получены перебором допустимых a (взаимно простых с 26) и b (0–25) до появления осмысленного текста после дешифрования, который затем корректно раскрывает флаг.  arctf{1t_wa5_v3ry_9los3}
 <img width="1422" height="907" alt="image" src="https://github.com/user-attachments/assets/b24d3b85-976b-4956-b26e-13f426940dc1" />
 
 
-### Bin5.exe
+## Bin5.exe
 <img width="1098" height="684" alt="image" src="https://github.com/user-attachments/assets/6f023640-812a-4221-8643-908f109d5e6c" />
 
 #### Открыл IDA, закинул bin5.exe и увидел код, где 5 проверок, которые не сильно спрятаны, все в коде на видном месте, надо просто писать в cmd 2500, 1828, 360, 9 и CaptureTheFlag, если все 5 проверок пройти он напишет флаг arctf{a_l0t_o7_q4est1ons}
