@@ -2,8 +2,7 @@
 
 <img width="1908" height="538" alt="image" src="https://github.com/user-attachments/assets/72826639-c223-41c2-8144-e8f5aad6ea73" />
 
-#### Программа запускает окно и проверяет строку ввода и строку в своей базе посимвольно
-#### 
+
 
 
 
