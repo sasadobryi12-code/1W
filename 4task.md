@@ -149,10 +149,21 @@ int __cdecl main(int argc, const char **argv, const char **envp)
 
 <img width="1080" height="957" alt="image" src="https://github.com/user-attachments/assets/3f6a48b4-2206-4d10-866e-731fb559e9ae" />
 
+Дано
+
 ``` c#
 if ( (5 * *(_DWORD *)Arglist * *(_DWORD *)Arglist % 256
       - 34 * *(_DWORD *)Arglist
       + 24) % 256 )
 ```
+*(_DWORD *)Arglist — это число x
+
+Первая часть: 5 * x * x % 256 — это 5𝑥2 mod  256
+
+Потом вычитается 34 * x, добавляется 24
+
+и получаем такое уравнение 5x² − 34x + 24 ≡ 0 (mod 256)
+
+Ответы: 6, 52, 134 и т.д
 
 <img width="1118" height="334" alt="image" src="https://github.com/user-attachments/assets/f38b8bb0-c3a5-420e-92b4-1a397f185179" />
