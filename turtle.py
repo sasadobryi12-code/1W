@@ -110,3 +110,74 @@ while v < 20:
         v+=1
 
 screen.exitonclick()
+
+# Упражнение №9: правильные многоугольники
+
+t = turtle.Turtle()
+screen = turtle.Screen()
+screen.bgcolor('black')
+t.color('green')
+t.shape('turtle')
+
+
+n = 6
+v = 40
+
+def draw_polygon(n, v):
+    angle = 360 / n
+    for i in range(n):
+        t.forward(v)
+        t.left(angle)
+
+for i in range(10):
+    draw_polygon(n, v)
+    v += 15
+    t.penup()
+    t.right(90)
+    t.forward(12)
+    t.right(90)
+    t.forward(8)
+    t.pendown()
+    t.setheading(0)
+screen.exitonclick()
+
+# Упражнение №10: «цветок»
+
+t = turtle.Turtle()
+screen = turtle.Screen()
+screen.bgcolor('black')
+t.color('green')
+t.shape('turtle')
+
+c = 360
+n = 5
+
+if n>=0 & n<=360:
+    angle=c/n
+    k=0
+    while k!=n:
+        t.circle(40)
+        t.right(angle)
+        k+=1
+    screen.exitonclick()
+
+# Упражнение №11: «бабочка»
+
+t = turtle.Turtle()
+screen = turtle.Screen()
+screen.bgcolor('black')
+t.color('green')
+t.shape('turtle')
+t.left(90)
+
+r=50
+n=2
+k=0
+while k!=n:
+    t.right(0)
+    t.circle(r)
+    t.circle(-r)
+    r+=7
+    k+=1
+
+# screen.exitonclick()
