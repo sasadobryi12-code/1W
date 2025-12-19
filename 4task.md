@@ -3,9 +3,9 @@
 <img width="1908" height="538" alt="image" src="https://github.com/user-attachments/assets/72826639-c223-41c2-8144-e8f5aad6ea73" />
 
 #### Программа запускает окно и проверяет строку ввода и строку в своей базе посимвольно
-#### Итоговая строка должна быть написана "arctf{z3r0_0r_no7_0}"
+#### 
 
-<img width="628" height="277" alt="image" src="https://github.com/user-attachments/assets/85cbd908-c957-44b0-aafa-fe1fc0c271ed" />
+
 
 
 
