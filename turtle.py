@@ -180,4 +180,23 @@ while k!=n:
     r+=7
     k+=1
 
-# screen.exitonclick()
+screen.exitonclick()
+
+# Упражнение №12: пружина
+
+t = turtle.Turtle()
+screen = turtle.Screen()
+screen.bgcolor('black')
+t.color('green')
+t.shape('turtle')
+
+t.penup()
+t.left(180)
+t.forward(200)
+t.pendown()
+for i in range(4):
+    t.setheading(90)
+    t.circle(-50, 180)
+    t.circle(-10, 180)
+t.circle(-50, 180)
+screen.exitonclick()
