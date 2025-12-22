@@ -310,6 +310,8 @@ gcd = year;
 
 ## Bin12.exe
 
+<img width="1085" height="485" alt="image" src="https://github.com/user-attachments/assets/eec9a499-6866-4590-9d7b-725d6daf12bc" />
+
 Бинарный файл реализует простую консольную утилиту шифрования ввода пользователя. Программа считывает строку с консоли, шифрует её по заданному алгоритму и выводит результат в шестнадцатеричном виде.
 
 <img width="720" height="258" alt="image" src="https://github.com/user-attachments/assets/395bda82-b6bb-4625-ba4f-fc48ae4d1793" />
