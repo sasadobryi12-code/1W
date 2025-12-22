@@ -234,3 +234,40 @@ t.pendown()
 t.forward(25)
 
 screen.exitonclick()
+
+# Упражнение №14: звезды
+
+t = turtle.Turtle()
+screen = turtle.Screen()
+screen.bgcolor('black')
+t.color('green')
+t.shape('turtle')
+
+t.setheading(270)
+t.width(2)
+
+def draw_star(n, size):
+    angle = 180 - 180 / n
+    for i in range(n):
+        t.forward(size)
+        t.right(angle)
+
+t.penup()
+t.right(90)
+t.forward(80)
+t.left(90)
+t.pendown()
+
+draw_star(11, 100)
+t.penup()
+t.left(90)
+t.forward(100)
+t.right(90)
+t.forward(40)
+t.left(90)
+
+t.pendown()
+draw_star(5, 100)
+turtle.done()
+
+screen.exitonclick()
