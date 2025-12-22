@@ -78,9 +78,7 @@ screen.exitonclick()
 
 # Упражнение №7: спираль
 
-import turtle
 
-t = turtle.Turtle()
 screen = turtle.Screen()
 screen.bgcolor('black')
 t.color('green')
@@ -113,7 +111,6 @@ screen.exitonclick()
 
 # Упражнение №9: правильные многоугольники
 
-t = turtle.Turtle()
 screen = turtle.Screen()
 screen.bgcolor('black')
 t.color('green')
@@ -143,7 +140,7 @@ screen.exitonclick()
 
 # Упражнение №10: «цветок»
 
-t = turtle.Turtle()
+
 screen = turtle.Screen()
 screen.bgcolor('black')
 t.color('green')
@@ -163,7 +160,6 @@ if n>=0 & n<=360:
 
 # Упражнение №11: «бабочка»
 
-t = turtle.Turtle()
 screen = turtle.Screen()
 screen.bgcolor('black')
 t.color('green')
@@ -184,7 +180,7 @@ screen.exitonclick()
 
 # Упражнение №12: пружина
 
-t = turtle.Turtle()
+
 screen = turtle.Screen()
 screen.bgcolor('black')
 t.color('green')
@@ -203,7 +199,6 @@ screen.exitonclick()
 
 # Упражнение №13: смайлик
 
-t = turtle.Turtle()
 screen = turtle.Screen()
 screen.bgcolor('black')
 t.color('green')
@@ -237,7 +232,6 @@ screen.exitonclick()
 
 # Упражнение №14: звезды
 
-t = turtle.Turtle()
 screen = turtle.Screen()
 screen.bgcolor('black')
 t.color('green')
