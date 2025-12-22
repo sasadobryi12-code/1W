@@ -1,6 +1,7 @@
 ## Bin1.exe
 
-<img width="1660" height="557" alt="image" src="https://github.com/user-attachments/assets/abd9829d-9a7c-411f-845f-96f93cdab72f" />
+<img width="1913" height="568" alt="image" src="https://github.com/user-attachments/assets/b3b8986c-8c28-4a19-82a0-6c8ed8cb4f54" />
+
 
 
 Я открыл бинарник в IDA и сначала посмотрел WinMain, понял, что там только создаётся окно и к проверке флага он не относится. Дальше пошёл в оконную процедуру (WndProc), где увидел, что проверка вызывается по WM_COMMAND с ID = 1, то есть при нажатии кнопки, а не при закрытии окна
@@ -18,6 +19,7 @@ e_char = key[i % 4] XOR (2 * o_char - 64)
 
 и с небольшими мохинациями наш флаг: kubanctf{n0th1ng_happ3ned_1n_t1an4nm3n_squ4r3}
 
+интересная музыка играет у бинарника...
 
 
 ## Bin3.exe
