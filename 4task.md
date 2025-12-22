@@ -524,6 +524,8 @@ print(key)
 
 ##Bin15.exe
 
+<img width="1076" height="683" alt="image" src="https://github.com/user-attachments/assets/7e1b18c1-c805-4ced-b8e1-12dee3d7e032" />
+
 После декомпиляции видно, что особой сложности в main нет — стандартная проверка аргументов и последовательность условий.
 
 
