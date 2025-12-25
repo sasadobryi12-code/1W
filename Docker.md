@@ -10,3 +10,24 @@
 Вторая команда означает, что позволяет создать и запустить контейнер на основе официального Docker-образа
 
 Треть команда Docker ps просто отображает список активных контейнеров в системе
+
+### Третье задание:
+<img width="1856" height="929" alt="изображение" src="https://github.com/user-attachments/assets/da83db61-4e78-486a-9dae-9c68d6e3ccac" />
+Тут тестовое задание, выбрал Docker run -it ubuntu exit. Запускает контейнер в Ubuntu, а дальше команда exit - выводит из контейнера
+
+### Четвертое задание:
+<img width="1865" height="942" alt="изображение" src="https://github.com/user-attachments/assets/b9fc3586-7da3-4ae8-920f-b9cd69c093d7" />
+docker run -d — name colleague_project my_project - запускает контейнер из образа my_project в фоне и присваивает ему имя colleague_project
+docker ps — filter "name=colleague_project" - показывает запущенные контейнеры по фильтру названия
+docker logs colleague_project - выводит логи контейнера
+
+### Пятое задание:
+<img width="1859" height="937" alt="изображение" src="https://github.com/user-attachments/assets/50c51b19-f645-4795-aabf-e213723b5975" />
+docker stop colleague_project - Останавливает запущенный контейнер 
+docker rm colleague_project - Удаляет остановленный контейнер
+
+### Шестое задание:
+<img width="1856" height="938" alt="изображение" src="https://github.com/user-attachments/assets/4e46780e-df06-4eeb-8551-2a5abe6acd55" />
+docker pull hello-world - Скачивает или обновляет образ hello-world из Docker Hub
+
+### Седьмое задание:
