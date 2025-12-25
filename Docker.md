@@ -31,3 +31,12 @@ docker rm colleague_project - Удаляет остановленный конт
 docker pull hello-world - Скачивает или обновляет образ hello-world из Docker Hub
 
 ### Седьмое задание:
+<img width="1859" height="929" alt="изображение" src="https://github.com/user-attachments/assets/016a7f99-4495-4566-b367-714aaec6ab81" />
+docker images - покажет список всех локальных Docker-образов с их описанием
+docker pull ubuntu:22.04 - команда скачивает образ ubuntu версии 22.04
+
+### Восьмое задание:
+<img width="1858" height="928" alt="изображение" src="https://github.com/user-attachments/assets/e42fd048-a30c-4118-884f-76ff0130ed22" />
+docker rmi ubuntu - удаляет образ ubuntu
+docker container prune - удаляет все остановленные контейнеры
+docker image prune -a - удаляет все образы, которые в свою очередь не используются ни одним контейнером
