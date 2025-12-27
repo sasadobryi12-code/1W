@@ -46,12 +46,16 @@ docker image prune -a - удаляет все образы, которые в с
 <img width="1855" height="933" alt="изображение" src="https://github.com/user-attachments/assets/a93663ff-5544-4965-91e0-0470821ec305" />
 Задание тестовое и спрашивается какой команды нет в docker, 
 docker trace - такая команда отсутсвует в документации
+
 ### Второе задание:
+
 <img width="1857" height="928" alt="изображение" src="https://github.com/user-attachments/assets/102bb4e5-a883-49ca-8bb6-3746f63ab245" />
 В следующем задании необходимо донаписать в файле с расширением sh, команду docker ps и запустить ее в терминале 
 ### Третье задание:
+
 <img width="1858" height="943" alt="изображение" src="https://github.com/user-attachments/assets/766da876-7043-4fda-90b5-94a866042735" />
 В следующем задании тестовый вопрос.Необходимо было выбрать команду, которая используется для автоматической очистки контейнера, который запущен на Alpine Linux, когда он завершит работу: docker run -it --rm alpine:3.19.2
 ### четвертое задание:
+
 <img width="1860" height="935" alt="изображение" src="https://github.com/user-attachments/assets/8ab25f66-0caf-4337-abbd-ecf11ba288c0" />
 В следующем задании Необходимо было запустить образ контейнера crane с помощью docker, после чего изменить файл ~/workspace/customerdata.json и обновить запись "Company Name" на The File Store. После чего запустить образ контейнера crane и передать файл ~/workspace/customerdata.json в путь /customerdata.json внутри контейнера. Запуск контейнера: docker run crane, в самом редакторе поменять название на The File Store, после чего запустить docker: docker run -v ~/workspace/customerdata.json:/customerdata.json, формат -v монтирует локальный файл внутрь контейнера, позволяя читать данные без пересборки.
