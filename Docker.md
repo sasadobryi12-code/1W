@@ -1,3 +1,9 @@
+## Накопленные баллы:
+
+<img width="387" height="151" alt="изображение" src="https://github.com/user-attachments/assets/03373a63-3e6e-4cac-ae59-78eb25fbc244" />
+
+
+
 ## Решение Docker
 ### Первое задание:
 <img width="1865" height="943" alt="изображение" src="https://github.com/user-attachments/assets/9b3a89d5-72cd-4d50-9d6a-73820d1bb3e1" />
