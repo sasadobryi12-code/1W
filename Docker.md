@@ -2,6 +2,7 @@
 
 <img width="387" height="151" alt="изображение" src="https://github.com/user-attachments/assets/03373a63-3e6e-4cac-ae59-78eb25fbc244" />
 
+По почте имя Саша, не обращайте на это внимания, это некий интернет псевдоним
 
 
 ## Решение Docker
