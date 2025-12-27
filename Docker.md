@@ -1,6 +1,7 @@
 ## Накопленные баллы:
 
-<img width="387" height="151" alt="изображение" src="https://github.com/user-attachments/assets/03373a63-3e6e-4cac-ae59-78eb25fbc244" />
+<img width="375" height="143" alt="изображение" src="https://github.com/user-attachments/assets/8c915fc5-e91a-4343-8bdf-d2a5622a4d2b" />
+
 
 По почте имя Саша, не обращайте на это внимания, это некий интернет псевдоним
 
