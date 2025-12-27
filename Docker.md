@@ -46,3 +46,6 @@ docker image prune -a - удаляет все образы, которые в с
 <img width="1855" height="933" alt="изображение" src="https://github.com/user-attachments/assets/a93663ff-5544-4965-91e0-0470821ec305" />
 Задание тестовое и спрашивается какой команды нет в docker
 docker trace - такая команда отсутсвует в документации
+### Второе задание:
+<img width="1857" height="928" alt="изображение" src="https://github.com/user-attachments/assets/102bb4e5-a883-49ca-8bb6-3746f63ab245" />
+В следующем задании необходимо донаписать в файле с расширением sh, команду docker ps и запустить ее в терминале 
