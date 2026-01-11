@@ -362,3 +362,38 @@ def task_17_func_recursive(tree):
         dfs(left, acc)
         dfs(right, acc)
     dfs(tree, 0)
+
+
+
+
+# Задание 9
+
+import numpy as np
+
+# Задание 1: массив от N-1 до 0
+N = 10
+arr1 = np.arange(N - 1, -1, -1)
+print(arr1)
+
+# Задание 2: диагональная матрица и сумма диагонали
+diag_matrix = np.diag(np.arange(N - 1, -1, -1))
+diag_sum = np.trace(diag_matrix)  # или diag_matrix.trace()
+print(diag_matrix)
+print("Сумма диагонали:", diag_sum)
+
+# Задание 3: решение системы уравнений
+# Система:
+# 4x + 2y +  z =  4
+#  x + 3y + 0z = 12
+# 0x + 5y + 4z = -3
+
+A = np.array([
+    [4, 2, 1],
+    [1, 3, 0],
+    [0, 5, 4]
+])
+
+b = np.array([4, 12, -3])
+
+solution = np.linalg.solve(A, b)
+print("x =", solution[0], ", y =", solution[1], ", z =", solution[2])
