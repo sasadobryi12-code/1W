@@ -9,4 +9,5 @@
 
 
 ## Проделал все как по инструкции, создавл файл task_12.asm, потом asm.bat, все в них записал, открыл командную строку, все записал и получил:
-<img width="616" height="332" alt="image" src="https://github.com/user-attachments/assets/6ad2ef5b-b46d-4694-a5f4-3af3f4f9bd92" />
+<img width="1089" height="584" alt="image" src="https://github.com/user-attachments/assets/99a4a404-7d3b-4290-8741-c76d43a4ce39" />
+
