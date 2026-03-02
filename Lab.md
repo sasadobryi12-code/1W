@@ -13,4 +13,5 @@
 
 
 Архив:
-[Новая папка (2).zip](https://github.com/user-attachments/files/25680914/2.zip)
+[lab_01_Мокеев.zip](https://github.com/user-attachments/files/25680921/lab_01_.zip)
+
