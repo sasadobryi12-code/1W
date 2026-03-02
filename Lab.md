@@ -11,3 +11,6 @@
 ## Проделал все как по инструкции, создавл файл task_12.asm, потом asm.bat, все в них записал, открыл командную строку, все записал и получил:
 <img width="1089" height="584" alt="image" src="https://github.com/user-attachments/assets/99a4a404-7d3b-4290-8741-c76d43a4ce39" />
 
+
+Архив:
+[Новая папка (2).zip](https://github.com/user-attachments/files/25680914/2.zip)
